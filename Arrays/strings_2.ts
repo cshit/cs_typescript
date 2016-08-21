@@ -30,6 +30,11 @@ console.log(permutation("melon", "lemon"));
 // Return if any value of the array turns into a negative number
 
 
+String.prototype.toCharArray = function(){
+	return this.split('').map(function(letter: string){return letter.charCodeAt()});
+};
+
+
 function permutation2 (s: string, t: string): boolean{
 	// Return in case of an stupid case
 	if(s.length != t.length)
@@ -40,7 +45,7 @@ function permutation2 (s: string, t: string): boolean{
 
 	// Lets count the letters
 	// Split s
-	var sArray: number[] = s.split('').map(function(letter: string){return letter.charCodeAt()});
+	var sArray: number[] = s.toCharArray();
 
 	// Iterate over new array and count in array
 	for(var letterCode in sArray){
