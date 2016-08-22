@@ -2,6 +2,7 @@
 * Rotate Matrix
 * Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes,
 * write a method to rotate the image 90 degrees. Can you do this in place?
+* BigO: 0(N^2) best we can do since we need to touch all NxN elements
 */
 
 
