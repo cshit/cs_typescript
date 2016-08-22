@@ -66,6 +66,7 @@ function rotate(matrix: string[][], n:number): void{
 	}
 
 }
+// Big0: O(N^2)
 
 rotate(matrix, 4);
 

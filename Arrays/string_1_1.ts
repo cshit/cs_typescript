@@ -53,6 +53,8 @@ function uniqueChars(str: string): boolean{
 	return true
 }
 
+// Big0: O(N)
+
 console.log(uniqueChars("SEBA"));
 
 

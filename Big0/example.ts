@@ -32,7 +32,7 @@ function printPairs(array: number[]):void{
 }
 
 // printPairs([1,2,3,4,5]);
-// BigO: O(N^2). Since we are iterating over all the elements 2 times
+// BigO: O(N^2). Since we are iterating over all for each element
 // We are printing all pairs and there are N^2 paris. 1-2 != 2-1
 
 // ----------------------------------------------------------------------

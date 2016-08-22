@@ -65,5 +65,7 @@ function permutation2 (s: string, t: string): boolean{
 	return true
 }
 
+// Big0: O(N)
+
 
 console.log(permutation2('mellon', 'llemon'));
