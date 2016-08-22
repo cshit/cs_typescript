@@ -23,11 +23,11 @@ console.log('-------------------');
 // Swap index by index
 function rotate(matrix: string[][], n:number): void{
 
-	for(var layer = 0; layer < n / 2; layer++){
+	for(let layer = 0; layer < n / 2; layer++){
 		var first: number = layer;
 		var last: number = n - 1 - layer;
 
-		for(var i = first; i < last; i++){
+		for(let i = first; i < last; i++){
 			var offset: number = i - layer;
 
 			console.log("");

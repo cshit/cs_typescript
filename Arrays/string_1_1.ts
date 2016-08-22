@@ -36,10 +36,10 @@ function uniqueChars(str: string): boolean{
 	var char_set: boolean[] = Array(128).fill(false);
 
 	// Iterate over the string flagging or returning false
-	for(var i: number = 0; i <= str.length; i++){
+	for(let i: number = 0; i <= str.length; i++){
 
 		// ASCII code for the corresponding character
-		var val: number = str.charCodeAt(i);
+		let val: number = str.charCodeAt(i);
 
 		// Return false if repeated character shows up again
 		if(char_set[val]){
@@ -53,43 +53,7 @@ function uniqueChars(str: string): boolean{
 	return true
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function checkUniqueness(str:string):boolean {
-	if (str.length >= 128)
-		return false;
-
-	var char_set: boolean[] = Array(128).fill(false);
-
-	for(var i: number =0; i < str.length; i++ ){
-
-		var val: number = str.charCodeAt(i);
-
-		if(char_set[val]){
-			console.log('Duplicated char:', str.charAt(i));
-			return false
-		}
-
-		char_set[val] = true;
-	}
-
-
-	return true;
-}
-
-// console.log(checkUniqueness("SEBA"));
+console.log(uniqueChars("SEBA"));
 
 
 

@@ -48,13 +48,13 @@ function permutation2 (s: string, t: string): boolean{
 	var sArray: number[] = s.toCharArray();
 
 	// Iterate over new array and count in array
-	for(var letterCode in sArray){
+	for(let letterCode in sArray){
 		letters[sArray[letterCode]]++;
 	}
 	
 	// Look for negatives counts when substracting
-	for (var i: number = 0; i <= t.length; i++){
-		var c: number = t.charCodeAt(i);
+	for (let i: number = 0; i <= t.length; i++){
+		let c: number = t.charCodeAt(i);
 		letters[c]--;
 		if(letters[c] < 0){
 			return false
