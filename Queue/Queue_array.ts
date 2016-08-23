@@ -21,9 +21,9 @@ export class QueueArray implements IQueue
 		return null
 	}
 
-	dequeue(data:any):void
+	dequeue():any
 	{
-		this.queue.shift()
+		return this.queue.shift()
 	}
 
 	size():number
