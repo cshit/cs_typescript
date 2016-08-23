@@ -7,18 +7,17 @@
 // Typing the Node
 interface INode{
 	data: any;
-	nextNode: INode;
+	next: INode;
 	appendToTail(data:any): INode;
 }
 
-
 class LNode implements INode{
 	data: any;
-	nextNode: INode;
+	next: LNode;
 
 	constructor(data: any){
 		this.data = data;
-		this.nextNode = null;
+		this.next = null;
 	}
 
 	// chainable method to append nodes
@@ -26,15 +25,22 @@ class LNode implements INode{
 		var end: INode = new LNode(data);
 		var n: INode = this;
 
-		while(n.nextNode != null){
-			n = n.nextNode;
+		while(n.next != null){
+			n = n.next;
 		}
 
-		n.nextNode = end;
+		n.next = end;
 
-		return n.nextNode;
+		return n.next;
 	}
 
+	remove(data: any){
+		// find the data match
+		// save previous and post
+		// connect them and remove this node
+
+		
+	}
 }
 
 var n0 = new LNode("YEAH");
