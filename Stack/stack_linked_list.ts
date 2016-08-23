@@ -1,4 +1,4 @@
-import {IStack} from "./interface";
+import {IStack} from "./Interface";
 import {ILinkedList} from "../LinkedList/Interfaces";
 import {LinkedList} from "../LinkedList/LinkedList_B";
 
