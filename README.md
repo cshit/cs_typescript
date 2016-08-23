@@ -9,4 +9,5 @@ Being able to teach and lecture around these topics in the context of this popul
 
 ## TODO:
 * Revisit names
+* Linked list fails on not unique data (values)
 * Change sloppy driver code for a test suit.
