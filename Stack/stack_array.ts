@@ -1,6 +1,6 @@
 import {IStack} from './interface'
 
-class Stack implements IStack
+export class StackArray implements IStack
 {
 
 	stack:any;
@@ -32,20 +32,3 @@ class Stack implements IStack
 		return this.stack.length
 	}
 }
-
-
-// Driver Code
-
-var stack = new Stack();
-//
-stack.push(1);
-stack.push(2);
-stack.push(3);
-console.log('Size:', stack.size());
-
-
-console.log(stack.pop());
-console.log(stack.pop());
-console.log('Size:', stack.size());
-// console.log(stack.pop())
-// console.log(stack.size())

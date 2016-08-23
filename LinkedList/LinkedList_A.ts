@@ -4,7 +4,7 @@
 * No LinkList class just nodes
 * */
 
-import {ILNode} from './interfaces'
+import {ILNode} from './Interfaces'
 
 export class LLNode implements ILNode{
 	data: any;

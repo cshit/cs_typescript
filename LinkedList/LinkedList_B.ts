@@ -2,7 +2,7 @@
 * Singly linked list
 * With LinkList class
 * */
-import {INode, ILinkedList} from './interfaces'
+import {INode, ILinkedList} from './Interfaces'
 import {LNode} from "./Node_B";
 
 export class LinkedList implements ILinkedList
@@ -64,7 +64,7 @@ export class LinkedList implements ILinkedList
 			actualNode = actualNode.next
 		}
 
-		actualNode.next = newNode
+		actualNode.next = newNode;
 		this.counter++;
 	}
 
@@ -72,13 +72,12 @@ export class LinkedList implements ILinkedList
 	{
 		if(this.head.data == data)
 		{
-			let newHead = this.head.next;
-			this.head = newHead;
+			this.head = this.head.next;
 			this.counter--;
 		}
 		else
 		{
-			this.head.next.remove(data, this.head);
+			this.head.remove(data, this.head);
 			this.counter--;
 		}
 	}

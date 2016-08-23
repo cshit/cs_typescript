@@ -1,4 +1,4 @@
-import {INode} from "./interfaces";
+import {INode} from "./Interfaces";
 
 export class LNode implements INode
 {

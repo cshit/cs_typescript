@@ -7,3 +7,6 @@
 **Objective:**
 Being able to teach and lecture around these topics in the context of this popular book.
 
+## TODO:
+* Revisit names
+* Change sloppy driver code for a test suit.
