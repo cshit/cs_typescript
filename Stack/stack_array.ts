@@ -1,14 +1,4 @@
-interface IStack
-{
-	stack: any;
-	numOfItems: number;
-
-	isEmpty(): boolean;
-	push(data: any): void;
-	pop(): any;
-	size(): number;
-}
-
+import {IStack} from './interface'
 
 class Stack implements IStack
 {

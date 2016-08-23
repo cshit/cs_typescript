@@ -2,51 +2,12 @@
 * Singly linked list
 * With LinkList class
 * */
+import {INode, ILinkedList} from './interfaces'
+import {LNode} from "./Node_B";
 
-// Typing the Node
-interface INode{
-	data: any;
-	next: INode;
-	remove(data: any, previousNode: INode): void;
-}
+export class LinkedList implements ILinkedList
+{
 
-class LNode implements INode{
-	data:any;
-	next:LNode;
-
-	constructor(data:any)
-	{
-		this.data = data;
-		this.next = null;
-	}
-
-	remove(data:any, previousNode:INode): void
-	{
-		var n = this;
-		if(n.data == data){
-			previousNode.next = n.next;
-		}else{ // In case user passed data does not match... look for it.
-			if(n.next != null){
-				n.next.remove(data, n)
-			}
-
-		}
-	}
-}
-
-interface ILinkedList{
-	head: INode;
-	counter: number;
-
-	insertStart(data:any):void;
-	size():number;
-	traverseList():void;
-	insertEnd(data:any):void;
-	remove(data:any):void;
-}
-
-
-class LinkedList implements ILinkedList{
 	counter:number;
 	head:INode;
 
@@ -122,24 +83,3 @@ class LinkedList implements ILinkedList{
 		}
 	}
 }
-
-
-
-// Dirver Code
-var linkedList = new LinkedList();
-
-linkedList.insertStart(12);
-linkedList.insertStart(2);
-linkedList.insertStart('Samba');
-linkedList.insertEnd(31);
-console.log('Count:', linkedList.size());
-linkedList.insertEnd(99);
-linkedList.insertStart(100);
-linkedList.remove(100);
-linkedList.traverseList();
-console.log('Count:',linkedList.size());
-
-console.log('-----------');
-
-linkedList.remove(99);
-linkedList.traverseList();

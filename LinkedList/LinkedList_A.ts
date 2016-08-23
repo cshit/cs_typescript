@@ -4,16 +4,11 @@
 * No LinkList class just nodes
 * */
 
-// Typing the Node
-interface INode{
-	data: any;
-	next: INode;
-	appendToTail(data:any): INode;
-}
+import {ILNode} from './interfaces'
 
-class LNode implements INode{
+export class LLNode implements ILNode{
 	data: any;
-	next: LNode;
+	next: LLNode;
 
 	constructor(data: any){
 		this.data = data;
@@ -21,9 +16,9 @@ class LNode implements INode{
 	}
 
 	// chainable method to append nodes
-	appendToTail(data: any): INode{
-		var end: INode = new LNode(data);
-		var n: INode = this;
+	appendToTail(data: any): ILNode{
+		var end: ILNode = new LLNode(data);
+		var n: ILNode = this;
 
 		while(n.next != null){
 			n = n.next;
@@ -40,8 +35,3 @@ class LNode implements INode{
 		// connect them and remove this node
 	}
 }
-
-var n0 = new LNode("YEAH");
-n0.appendToTail(1).appendToTail(2);
-
-console.log(n0);
