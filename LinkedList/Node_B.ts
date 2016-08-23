@@ -1,4 +1,4 @@
-import {INode} from "./Interfaces";
+import {INode} from "./Interfaces.d";
 
 export class LNode implements INode
 {
@@ -15,9 +15,12 @@ export class LNode implements INode
 	remove(data:any, previousNode:INode): void
 	{
 		var n = this;
-		if(n.data == data){
+		if(n.data == data)
+		{
 			previousNode.next = n.next;
-		}else{ // In case user passed data does not match... look for it.
+		}
+		else
+		{ // In case user passed data does not match... look for it.
 			if(n.next != null){
 				n.next.remove(data, n)
 			}

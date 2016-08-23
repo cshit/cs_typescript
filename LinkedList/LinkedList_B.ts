@@ -2,7 +2,7 @@
 * Singly linked list
 * With LinkList class
 * */
-import {INode, ILinkedList} from './Interfaces'
+import {INode, ILinkedList} from './Interfaces.d'
 import {LNode} from "./Node_B";
 
 export class LinkedList implements ILinkedList

@@ -1,5 +1,5 @@
-import {IStack} from "./Interface";
-import {ILinkedList} from "../LinkedList/Interfaces";
+import {IStack} from "./Interface.d";
+import {ILinkedList} from "../LinkedList/Interfaces.d";
 import {LinkedList} from "../LinkedList/LinkedList_B";
 
 export class StackLinkedList implements IStack{

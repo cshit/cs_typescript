@@ -5,7 +5,7 @@ export interface ILNode
 	appendToTail(data:any): ILNode;
 }
 
-export interface INode
+export interface INode  
 {
 	data: any;
 	next: INode;
@@ -16,7 +16,6 @@ export interface ILinkedList
 {
 	head: INode;
 	counter: number;
-
 	insertStart(data:any):void;
 	size():number;
 	traverseList():void;

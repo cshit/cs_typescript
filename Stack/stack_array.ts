@@ -1,4 +1,4 @@
-import {IStack} from './Interface'
+import {IStack} from './Interface.d'
 
 export class StackArray implements IStack
 {
