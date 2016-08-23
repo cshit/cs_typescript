@@ -38,8 +38,6 @@ class LNode implements INode{
 		// find the data match
 		// save previous and post
 		// connect them and remove this node
-
-		
 	}
 }
 

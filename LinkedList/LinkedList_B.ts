@@ -20,7 +20,7 @@ class LNode implements INode{
 		this.next = null;
 	}
 
-	remove(data:any, previousNode:INode)
+	remove(data:any, previousNode:INode): void
 	{
 		var n = this;
 		if(n.data == data){
@@ -123,6 +123,9 @@ class LinkedList implements ILinkedList{
 	}
 }
 
+
+
+// Dirver Code
 var linkedList = new LinkedList();
 
 linkedList.insertStart(12);
@@ -133,7 +136,6 @@ console.log('Count:', linkedList.size());
 linkedList.insertEnd(99);
 linkedList.insertStart(100);
 linkedList.remove(100);
-
 linkedList.traverseList();
 console.log('Count:',linkedList.size());
 
@@ -141,18 +143,3 @@ console.log('-----------');
 
 linkedList.remove(99);
 linkedList.traverseList();
-
-
-
-// linkedList.insertStart(122);
-// linkedList.insertStart(3);
-
-//
-// linkedList.traverseList();
-//
-// linkedList.remove(31);
-// linkedList.remove(3);
-// linkedList.remove(122);
-//
-// linkedList.traverseList();
-
