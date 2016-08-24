@@ -54,6 +54,24 @@ export class LinkedList implements ILinkedList
 		console.log(printedList);
 	}
 
+	traverseListObject(): Object
+	{
+		var actualNode = this.head;
+		var dataObject = {};
+		var counter = 0;
+
+		while(actualNode != null)
+		{
+			dataObject[counter] = actualNode.data;
+			counter++;
+			actualNode = actualNode.next;
+		}
+		
+		return dataObject
+	}
+
+
+
 	insertEnd(data:any):void
 	{
 		var actualNode = this.head;
