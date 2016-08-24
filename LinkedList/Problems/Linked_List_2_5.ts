@@ -8,17 +8,14 @@
 * Output: 2  -> 1  ->  9
 */
 
-
-// a.toString().split('')
-// 	["1", "2", "3"]
-
 import {LinkedList} from "../LinkedList_B";
 
-
+/*
+* Linked List Factory
+*/
 function createLinkedListFromNumber(num: number)
 {
 	var numArray = num.toString().split('');
-
 	var linkedList = new LinkedList();
 
 	numArray.forEach((digit) => {
@@ -28,7 +25,10 @@ function createLinkedListFromNumber(num: number)
 	return linkedList
 }
 
-function createNumberFromLinkList(linkList: LinkedList): number
+/*
+* Iterative Approach
+*/
+function createNumberFromLinkListIterative(linkList: LinkedList): number
 {
 	var dataObject = linkList.traverseListObject();
 	var numberInString = '';
@@ -46,12 +46,25 @@ function createNumberFromLinkList(linkList: LinkedList): number
 	return parseInt(reversedNumberString)
 }
 
-function addTwoLinkList(ll1: LinkedList, ll2: LinkedList)
+/*
+* Recursive Approach
+*/
+function createNumberFromLinkListRecursive(linkList: LinkedList): number
 {
-	var  ll1Number = createNumberFromLinkList(ll1);
-	var  ll2Number = createNumberFromLinkList(ll2);
+	var head = linkList.head;
+	// Implement the recursive wat from the head down
+	// using the stack on the way back if possible
 
-	console.log('Numbers:',ll1Number, ll2Number, ll1Number + ll2Number);
+	return 999
+}
+
+/*
+* Add Two Linked Lists sing any of the approaches
+*/
+function addTwoLinkList(ll1: LinkedList, ll2: LinkedList, approach: Function)
+{
+	var  ll1Number = approach(ll1);
+	var  ll2Number = approach(ll2);
 
 	return createLinkedListFromNumber(ll1Number + ll2Number)
 }
@@ -64,4 +77,7 @@ var ll2 = createLinkedListFromNumber(295);
 ll1.traverseList();
 ll2.traverseList();
 
-addTwoLinkList(ll1, ll2).traverseList();
+addTwoLinkList(ll1, ll2, createNumberFromLinkListIterative).traverseList();
+
+
+
