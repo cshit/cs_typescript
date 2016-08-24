@@ -6,18 +6,21 @@
 
 import {ILNode} from './Interfaces.d'
 
-export class LLNode implements ILNode{
-	data: any;
+export class LLNode implements ILNode
+{
+	value: any;
 	next: LLNode;
 
-	constructor(data: any){
-		this.data = data;
+	constructor(value: any)
+	{
+		this.value = value;
 		this.next = null;
 	}
 
 	// chainable method to append nodes
-	appendToTail(data: any): ILNode{
-		var end: ILNode = new LLNode(data);
+	appendToTail(value: any): ILNode
+	{
+		var end: ILNode = new LLNode(value);
 		var n: ILNode = this;
 
 		while(n.next != null){
@@ -29,9 +32,11 @@ export class LLNode implements ILNode{
 		return n.next;
 	}
 
-	remove(data: any){
-		// find the data match
+	remove(value: any): void
+	{
+		// find the value match
 		// save previous and post
 		// connect them and remove this node
+		
 	}
 }

@@ -4,7 +4,8 @@ export interface IStack
 	numOfItems: number;
 
 	isEmpty(): boolean;
-	push(data: any): void;
+	push(value: any): void;
 	pop(): any;
 	size(): number;
+	peek(): any;
 }

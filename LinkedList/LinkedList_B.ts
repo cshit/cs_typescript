@@ -17,9 +17,9 @@ export class LinkedList implements ILinkedList
 		this.counter = 0;
 	}
 
-	insertStart(data:any):void
+	insertStart(value:any):void
 	{
-		var newNode = new LNode(data);
+		var newNode = new LNode(value);
 
 		//	if there si no head create, if there is head then add node and make it the head
 		if(this.head)
@@ -47,7 +47,7 @@ export class LinkedList implements ILinkedList
 
 		while(actualNode != null)
 		{
-			printedList = printedList + actualNode.data + ' -> ';
+			printedList = printedList + actualNode.value + ' -> ';
 			actualNode = actualNode.next;
 		}
 
@@ -57,25 +57,25 @@ export class LinkedList implements ILinkedList
 	traverseListObject(): Object
 	{
 		var actualNode = this.head;
-		var dataObject = {};
+		var valueObject = {};
 		var counter = 0;
 
 		while(actualNode != null)
 		{
-			dataObject[counter] = actualNode.data;
+			valueObject[counter] = actualNode.value;
 			counter++;
 			actualNode = actualNode.next;
 		}
 		
-		return dataObject
+		return valueObject
 	}
 
 
 
-	insertEnd(data:any):void
+	insertEnd(value:any):void
 	{
 		var actualNode = this.head;
-		var newNode =  new LNode(data);
+		var newNode =  new LNode(value);
 
 		while(actualNode.next != null)
 		{
@@ -86,16 +86,16 @@ export class LinkedList implements ILinkedList
 		this.counter++;
 	}
 
-	remove(data:any):void
+	remove(value:any):void
 	{
-		if(this.head.data == data)
+		if(this.head.value == value)
 		{
 			this.head = this.head.next;
 			this.counter--;
 		}
 		else
 		{
-			this.head.remove(data, this.head);
+			this.head.remove(value, this.head);
 			this.counter--;
 		}
 	}

@@ -1,24 +1,24 @@
 export interface ILNode
 {
-	data: any;
+	value: any;
 	next: ILNode;
-	appendToTail(data:any): ILNode;
+	appendToTail(value:any): ILNode;
 }
 
 export interface INode  
 {
-	data: any;
+	value: any;
 	next: INode;
-	remove(data: any, previousNode: INode): void;
+	remove(value: any, previousNode: INode): void;
 }
 
 export interface ILinkedList
 {
 	head: INode;
 	counter: number;
-	insertStart(data:any):void;
+	insertStart(value:any):void;
 	size():number;
 	traverseList():void;
-	insertEnd(data:any):void;
-	remove(data:any):void;
+	insertEnd(value:any):void;
+	remove(value:any):void;
 }

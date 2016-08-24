@@ -3,26 +3,26 @@ import {INode} from "./Interfaces.d";
 export class LNode implements INode
 {
 
-	data:any;
+	value:any;
 	next:LNode;
 
-	constructor(data:any)
+	constructor(value:any)
 	{
-		this.data = data;
+		this.value = value;
 		this.next = null;
 	}
 
-	remove(data:any, previousNode:INode): void
+	remove(value:any, previousNode:INode): void
 	{
 		var n = this;
-		if(n.data == data)
+		if(n.value == value)
 		{
 			previousNode.next = n.next;
 		}
 		else
-		{ // In case user passed data does not match... look for it.
+		{ // In case user passed value does not match... look for it.
 			if(n.next != null){
-				n.next.remove(data, n)
+				n.next.remove(value, n)
 			}
 
 		}
