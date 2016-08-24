@@ -52,7 +52,7 @@ function createNumberFromLinkListIterative(linkList: LinkedList): number
 function createNumberFromLinkListRecursive(linkList: LinkedList): number
 {
 	var head = linkList.head;
-	// Implement the recursive wat from the head down
+	// Implement the recursive way from the head down
 	// using the stack on the way back if possible
 
 	return 999
