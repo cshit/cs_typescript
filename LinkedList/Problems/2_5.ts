@@ -78,6 +78,3 @@ ll1.traverseList();
 ll2.traverseList();
 
 addTwoLinkList(ll1, ll2, createNumberFromLinkListIterative).traverseList();
-
-
-
