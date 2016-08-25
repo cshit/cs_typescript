@@ -17,9 +17,9 @@ export class StackArray implements IStack
 		return this.stack.length == 0
 	}
 
-	push(data:any):void
+	push(value:any):void
 	{
-		this.stack.push(data);
+		this.stack.push(value);
 	}
 
 	pop():any
@@ -30,5 +30,10 @@ export class StackArray implements IStack
 	size():number
 	{
 		return this.stack.length
+	}
+
+	peek(): any
+	{
+		return this.stack[this.size()-1]
 	}
 }

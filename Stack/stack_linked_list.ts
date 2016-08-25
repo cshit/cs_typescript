@@ -17,10 +17,10 @@ export class StackLinkedList implements IStack{
 		return this.stack.counter == 0;
 	}
 
-	push(data:any):void
+	push(value:any):void
 	{
 		this.numOfItems++;
-		this.stack.insertStart(data);
+		this.stack.insertStart(value);
 	}
 
 	pop():any
