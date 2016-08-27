@@ -8,6 +8,8 @@ export interface INodeBST
 	minValue(): any;
 	remove(value): void;
 	traverseInOrder(): any[];
+	traversePreOrder():any[];
+	traversePostOrder():any[]
 
 }
 

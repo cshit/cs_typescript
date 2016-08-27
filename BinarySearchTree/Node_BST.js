@@ -31,6 +31,34 @@ var NodeBST = (function () {
         return node.value;
     };
     NodeBST.prototype.remove = function (value) {
+        var currentNode = this;
+        var prevNode;
+        console.log(this.value);
+        while (currentNode.value != value) {
+            if (currentNode < value) {
+                currentNode = currentNode.leftChild;
+            }
+            else {
+                currentNode = currentNode.rightChild;
+            }
+            prevNode = currentNode;
+        }
+        console.log(currentNode);
+        console.log(prevNode);
+        if (currentNode.rightChild == null && currentNode.leftChild == null) {
+            if (prevNode.rightChild.value == value) {
+                currentNode.rightChild = null;
+            }
+            else {
+                currentNode.leftChild = null;
+            }
+        }
+        if (currentNode.leftChild) {
+            prevNode.leftChild = currentNode.leftChild;
+        }
+        else {
+            prevNode.rightChild = currentNode.rightChild;
+        }
     };
     NodeBST.prototype.traverseInOrder = function () {
         var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
@@ -40,6 +68,26 @@ var NodeBST = (function () {
         array.push(this.value);
         if (this.rightChild)
             this.rightChild.traverseInOrder(array);
+        return array;
+    };
+    NodeBST.prototype.traversePreOrder = function () {
+        var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
+        console.log(this.value);
+        array.push(this.value);
+        if (this.leftChild)
+            this.leftChild.traversePreOrder(array);
+        if (this.rightChild)
+            this.rightChild.traversePreOrder(array);
+        return array;
+    };
+    NodeBST.prototype.traversePostOrder = function () {
+        var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
+        if (this.leftChild)
+            this.leftChild.traversePreOrder(array);
+        if (this.rightChild)
+            this.rightChild.traversePreOrder(array);
+        console.log(this.value);
+        array.push(this.value);
         return array;
     };
     return NodeBST;
