@@ -7,10 +7,20 @@ var NodeBST = (function () {
     }
     NodeBST.prototype.insert = function (value) {
         if (value < this.value) {
-            this.leftChild = new NodeBST(value);
+            if (this.leftChild) {
+                this.leftChild.insert(value);
+            }
+            else {
+                this.leftChild = new NodeBST(value);
+            }
         }
         else {
-            this.rightChild = new NodeBST(value);
+            if (this.rightChild) {
+                this.rightChild.insert(value);
+            }
+            else {
+                this.rightChild = new NodeBST(value);
+            }
         }
     };
     NodeBST.prototype.minValue = function () {
@@ -23,7 +33,14 @@ var NodeBST = (function () {
     NodeBST.prototype.remove = function (value) {
     };
     NodeBST.prototype.traverseInOrder = function () {
-        return undefined;
+        var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
+        if (this.leftChild)
+            this.leftChild.traverseInOrder(array);
+        console.log(this.value);
+        array.push(this.value);
+        if (this.rightChild)
+            this.rightChild.traverseInOrder(array);
+        return array;
     };
     return NodeBST;
 }());
