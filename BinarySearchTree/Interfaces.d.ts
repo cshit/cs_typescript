@@ -10,7 +10,6 @@ export interface INodeBST
 	traverseInOrder(): any[];
 	traversePreOrder():any[];
 	traversePostOrder():any[]
-
 }
 
 export interface IBinarySearchTree

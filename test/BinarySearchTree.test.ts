@@ -79,8 +79,20 @@ describe('Binary Search Tree', ()=>{
 			it(' in-order', ()=>{
 				var nodesInOrder = rootNode.traverseInOrder();
 				assert(nodesInOrder, sampleArray.sort())
+			});
+
+			it(' pre-order', ()=>{
+				var nodesInOrder = rootNode.traverseInOrder();
+				assert(nodesInOrder, sampleArray.sort())
+			});
+
+			it(' post-order', ()=>{
+				var nodesInOrder = rootNode.traverseInOrder();
+				assert(nodesInOrder, sampleArray.sort())
 			})
 		})
+
+
 
 	});
 });

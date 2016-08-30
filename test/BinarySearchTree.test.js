@@ -67,6 +67,14 @@ describe('Binary Search Tree', function () {
                 var nodesInOrder = rootNode.traverseInOrder();
                 assert(nodesInOrder, sampleArray.sort());
             });
+            it(' pre-order', function () {
+                var nodesInOrder = rootNode.traverseInOrder();
+                assert(nodesInOrder, sampleArray.sort());
+            });
+            it(' post-order', function () {
+                var nodesInOrder = rootNode.traverseInOrder();
+                assert(nodesInOrder, sampleArray.sort());
+            });
         });
     });
 });

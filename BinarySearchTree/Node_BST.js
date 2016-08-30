@@ -61,6 +61,7 @@ var NodeBST = (function () {
         }
     };
     NodeBST.prototype.traverseInOrder = function () {
+        // argument for internal use in recursive execution
         var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
         if (this.leftChild)
             this.leftChild.traverseInOrder(array);

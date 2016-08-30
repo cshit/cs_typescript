@@ -11,7 +11,7 @@ var QueueLinkedList = (function () {
         this.queue.insertEnd(data);
     };
     QueueLinkedList.prototype.dequeue = function () {
-        var dataToReturn = this.queue.head.data;
+        var dataToReturn = this.queue.head.value;
         this.queue.remove(dataToReturn);
     };
     QueueLinkedList.prototype.size = function () {

@@ -100,6 +100,7 @@ export default class NodeBST implements INodeBST
 
 	traverseInOrder():any[]
 	{
+		// argument for internal use in recursive execution
 		var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
 
 		if(this.leftChild)

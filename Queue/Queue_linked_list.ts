@@ -23,7 +23,7 @@ export class QueueLinkedList implements IQueue
 
 	dequeue():void
 	{
-		var dataToReturn = this.queue.head.data;
+		var dataToReturn = this.queue.head.value;
 		this.queue.remove(dataToReturn);
 	}
 
