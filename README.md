@@ -11,3 +11,22 @@ Being able to teach and lecture around these topics in the context of this popul
 * Revisit names
 * Linked list fails on not unique data (values)
 * Change sloppy driver code for a test suit.
+
+## Install:  
+
+If using WebStorm anable TypeScript compiler to read from `tsconfig.json`  
+
+Step 1:  
+`$ npm install`  
+
+Step 2:  
+Install the [typings tool](https://github.com/typings/typings) globaly  
+`$ npm install typings --global`
+
+Step 3:  
+Install the types set on typings.json  
+`$ typings install --dev`  
+
+## Smoke test on `master branch`  
+You have to see some test getting executed  
+`$ mocha`  
