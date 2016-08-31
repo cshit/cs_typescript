@@ -33,18 +33,18 @@ var NodeBST = (function () {
     NodeBST.prototype.remove = function (value) {
         var currentNode = this;
         var prevNode;
-        console.log(this.value);
+        var direction = '';
         while (currentNode.value != value) {
-            if (currentNode < value) {
-                currentNode = currentNode.leftChild;
-            }
-            else {
+            prevNode = currentNode;
+            if (currentNode.value < value) {
+                direction = 'right';
                 currentNode = currentNode.rightChild;
             }
-            prevNode = currentNode;
+            else {
+                direction = 'left';
+                currentNode = currentNode.leftChild;
+            }
         }
-        console.log(currentNode);
-        console.log(prevNode);
         if (currentNode.rightChild == null && currentNode.leftChild == null) {
             if (prevNode.rightChild.value == value) {
                 currentNode.rightChild = null;
@@ -53,11 +53,23 @@ var NodeBST = (function () {
                 currentNode.leftChild = null;
             }
         }
-        if (currentNode.leftChild) {
-            prevNode.leftChild = currentNode.leftChild;
+        else if (currentNode.leftChild) {
+            console.log('left');
+            if (direction == 'left') {
+                prevNode.leftChild = currentNode.leftChild;
+            }
+            else {
+                prevNode.rightChild = currentNode.leftChild;
+            }
         }
-        else {
-            prevNode.rightChild = currentNode.rightChild;
+        else if (currentNode.rightChild) {
+            console.log('right');
+            if (direction == 'right') {
+                prevNode.rightChild = currentNode.rightChild;
+            }
+            else {
+                prevNode.leftChild = currentNode.rightChild;
+            }
         }
     };
     NodeBST.prototype.traverseInOrder = function () {
@@ -93,6 +105,6 @@ var NodeBST = (function () {
     };
     return NodeBST;
 }());
-exports.__esModule = true;
-exports["default"] = NodeBST;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = NodeBST;
 //# sourceMappingURL=Node_BST.js.map

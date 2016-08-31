@@ -37,9 +37,9 @@ function permutation2(s, t) {
     }
     // Look for negatives counts when substracting
     for (var i = 0; i <= t.length; i++) {
-        var c = t.charCodeAt(i);
-        letters[c]--;
-        if (letters[c] < 0) {
+        var c_1 = t.charCodeAt(i);
+        letters[c_1]--;
+        if (letters[c_1] < 0) {
             return false;
         }
     }

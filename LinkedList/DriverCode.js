@@ -25,4 +25,4 @@ console.log('-----------');
 linkedList.remove(99);
 linkedList.traverseList();
 console.log("---------- END OF TEST ----------");
-//# sourceMappingURL=DriverCode.js.map
+//# sourceMappingURL=driverCode.js.map

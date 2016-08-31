@@ -6,7 +6,35 @@ var bsn = new NodeBST(10);
 
 // console.log(bsn);
 console.log(bsn.traverseInOrder());
-console.log(bsn.traversePreOrder());
-console.log(bsn.traversePostOrder());
+
+console.log('');
+console.log('*****************');
+// console.log(bsn.traversePreOrder());
+// console.log(bsn.traversePostOrder());
 console.log(bsn.remove(7));
-console.log(bsn.remove(12));
+// console.log(bsn.remove(12));
+
+console.log('');
+console.log('*****************');
+console.log(bsn.traverseInOrder());
+
+console.log('');
+console.log('*****************');
+// console.log(bsn.traversePreOrder());
+// console.log(bsn.traversePostOrder());
+console.log(bsn.remove(16));
+// console.log(bsn.remove(12));
+
+console.log('');
+console.log('*****************');
+console.log(bsn.traverseInOrder());
+console.log('');
+console.log('*****************');
+// console.log(bsn.traversePreOrder());
+// console.log(bsn.traversePostOrder());
+console.log(bsn.remove(19));
+// console.log(bsn.remove(12));
+
+console.log('');
+console.log('*****************');
+console.log(bsn.traversePostOrder());

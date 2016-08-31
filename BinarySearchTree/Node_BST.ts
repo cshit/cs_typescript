@@ -53,28 +53,26 @@ export default class NodeBST implements INodeBST
 
 	remove(value):void
 	{
-		var currentNode: NodeBST = this;
-		var prevNode: NodeBST;
-
-		console.log(this.value);
+		var currentNode: INodeBST = this;
+		var prevNode: INodeBST;
+		var direction: string = '';
 
 		while(currentNode.value != value)
 		{
-			if(currentNode < value)
+			prevNode = currentNode;
+			
+			if(currentNode.value < value)
 			{
-				currentNode = currentNode.leftChild;
+				direction = 'right';
+				currentNode = currentNode.rightChild;
 			}
 			else
 			{
-				currentNode = currentNode.rightChild;
+				direction = 'left';
+				currentNode = currentNode.leftChild;
 			}
-
-			prevNode = currentNode
 		}
-
-		console.log(currentNode);
-		console.log(prevNode);
-
+		
 		if(currentNode.rightChild == null && currentNode.leftChild == null)
 		{
 			if(prevNode.rightChild.value == value)
@@ -86,14 +84,30 @@ export default class NodeBST implements INodeBST
 				currentNode.leftChild = null
 			}
 		}
-		
-		if(currentNode.leftChild)
+		else if(currentNode.leftChild)
 		{
-			prevNode.leftChild = currentNode.leftChild
+			console.log('left');
+			if(direction == 'left')
+			{
+				prevNode.leftChild = currentNode.leftChild
+			}
+			else
+			{
+				prevNode.rightChild = currentNode.leftChild
+			}
 		}
-		else
+		else if (currentNode.rightChild)
 		{
-			prevNode.rightChild = currentNode.rightChild
+			console.log('right');
+			if(direction == 'right')
+			{
+				prevNode.rightChild = currentNode.rightChild
+			}
+			else
+			{
+				prevNode.leftChild = currentNode.rightChild
+			}
+
 		}
 			
 	}

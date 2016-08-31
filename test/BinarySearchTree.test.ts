@@ -64,13 +64,13 @@ describe('Binary Search Tree', ()=>{
 		describe('Remove', ()=>{
 			it('remove targeted left child', ()=>{
 				rootNode.remove(7);
-				assert.equal(rootNode.leftChild, 3)
+				assert.equal(rootNode.leftChild.value, 3)
 			}
 			);
 
 			it('remove targeted right child', ()=>{
-					rootNode.remove(3);
-					assert.equal(rootNode.rightChild, 16)
+					rootNode.remove(12);
+					assert.equal(rootNode.rightChild.value, 11)
 				}
 			)
 		});

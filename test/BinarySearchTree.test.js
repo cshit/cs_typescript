@@ -36,7 +36,7 @@ describe('Binary Search Tree', function () {
         *
         * */
         beforeEach('some description', function () {
-            rootNode = new Node_BST_1["default"](10);
+            rootNode = new Node_BST_1.default(10);
             sampleArray.forEach(function (val) { rootNode.insert(val); });
         });
         describe('Initialization', function () {
@@ -55,11 +55,11 @@ describe('Binary Search Tree', function () {
         describe('Remove', function () {
             it('remove targeted left child', function () {
                 rootNode.remove(7);
-                assert.equal(rootNode.leftChild, 3);
+                assert.equal(rootNode.leftChild.value, 3);
             });
             it('remove targeted right child', function () {
-                rootNode.remove(3);
-                assert.equal(rootNode.rightChild, 16);
+                rootNode.remove(12);
+                assert.equal(rootNode.rightChild.value, 11);
             });
         });
         describe('Traverse', function () {
