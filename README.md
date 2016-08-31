@@ -20,7 +20,7 @@ Step 1:
 `$ npm install`  
 
 Step 2:  
-Install the [typings tool](https://github.com/typings/typings) globaly
+Install the [typings tool](https://github.com/typings/typings) globaly  
 `$ npm install typings --global`
 
 Step 3:  
