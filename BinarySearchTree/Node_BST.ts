@@ -75,13 +75,13 @@ export default class NodeBST implements INodeBST
 		
 		if(currentNode.rightChild == null && currentNode.leftChild == null)
 		{
-			if(prevNode.rightChild.value == value)
+			if(direction == 'right')
 			{
-				currentNode.rightChild = null
+				prevNode.rightChild = null
 			}
 			else
 			{
-				currentNode.leftChild = null
+				prevNode.leftChild = null
 			}
 		}
 		else if(currentNode.leftChild)
@@ -107,7 +107,6 @@ export default class NodeBST implements INodeBST
 			{
 				prevNode.leftChild = currentNode.rightChild
 			}
-
 		}
 			
 	}

@@ -46,11 +46,11 @@ var NodeBST = (function () {
             }
         }
         if (currentNode.rightChild == null && currentNode.leftChild == null) {
-            if (prevNode.rightChild.value == value) {
-                currentNode.rightChild = null;
+            if (direction == 'right') {
+                prevNode.rightChild = null;
             }
             else {
-                currentNode.leftChild = null;
+                prevNode.leftChild = null;
             }
         }
         else if (currentNode.leftChild) {
