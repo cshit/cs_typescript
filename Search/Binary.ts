@@ -49,6 +49,7 @@ export function binarySearchRecursive(arr:number[], num:number, low:number, high
 	}
 	else
 	{
+		// console.log(mid);
 		return mid
 	}
 }
