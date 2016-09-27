@@ -1,7 +1,7 @@
 export default function selectionSort(arr:number[]):number[]
 {
-	var index:number = 0;
-	var high:number = arr.length -1;
+	var index:number    = 0;
+	var high:number     = arr.length-1;
 
 	while(index <= high)
 	{
