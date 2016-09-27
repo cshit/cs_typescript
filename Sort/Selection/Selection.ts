@@ -1,16 +1,16 @@
-export default function selectionSort(arr:number[])
+export default function selectionSort(arr:number[]):number[]
 {
-	var index = 0;
-	var high = arr.length -1;
+	var index:number = 0;
+	var high:number = arr.length -1;
 
 	while(index <= high)
 	{
-		var initial = 0;
+		var initial:number = 0;
 
 		for(let i=initial; i<=high; i++)
 		{
-			var base = arr[initial];
-			var current = arr[i+1];
+			var base:number = arr[initial];
+			var current:number = arr[i+1];
 
 			if( base > current)
 			{
