@@ -9,12 +9,12 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Stack_array_1 = require("../Stack_array");
+var stack_array_1 = require("../stack_array");
 var StackMin = (function (_super) {
     __extends(StackMin, _super);
     function StackMin() {
         _super.call(this);
-        this.s2 = new Stack_array_1.StackArray();
+        this.s2 = new stack_array_1.StackArray();
     }
     StackMin.prototype.push = function (value) {
         if (value <= this.min()) {
@@ -37,7 +37,7 @@ var StackMin = (function (_super) {
         }
     };
     return StackMin;
-}(Stack_array_1.StackArray));
+}(stack_array_1.StackArray));
 // Prove it!
 var stackMin = new StackMin();
 stackMin.push(10);

@@ -27,9 +27,9 @@
 
 export default function selectionSort(arr:number[]):number[]
 {
-	for(var j=0; j<=arr.length-1; j++)
+	for(let j=0; j<=arr.length-1; j++)
 	{
-		for(var i=j+1; i<=arr.length-1; i++)
+		for(let i=j+1; i<=arr.length-1; i++)
 		{
 			var base:number = arr[j];
 			var current:number = arr[i];

@@ -5,7 +5,7 @@
 */
 
 
-import {StackArray} from "../Stack_array";
+import {StackArray} from "../stack_array";
 class StackMin extends StackArray
 {
 	s2: StackArray;

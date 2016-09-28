@@ -22,4 +22,4 @@ var StackArray = (function () {
     return StackArray;
 }());
 exports.StackArray = StackArray;
-//# sourceMappingURL=Stack_array.js.map
+//# sourceMappingURL=stack_array.js.map

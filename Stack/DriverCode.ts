@@ -1,5 +1,5 @@
-import {StackArray} from "./Stack_array";
-import {StackLinkedList} from "./Stack_linked_list";
+import {StackArray} from "./stack_array";
+import {StackLinkedList} from "./stack_linked_list";
 
 
 // Driver Code for SatckArray

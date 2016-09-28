@@ -28,4 +28,4 @@ var StackLinkedList = (function () {
     return StackLinkedList;
 }());
 exports.StackLinkedList = StackLinkedList;
-//# sourceMappingURL=Stack_linked_list.js.map
+//# sourceMappingURL=stack_linked_list.js.map
