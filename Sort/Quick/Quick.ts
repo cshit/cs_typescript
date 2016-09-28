@@ -1,14 +1,12 @@
 export default function quickSort(arr:number[], low, high){
-	if(low > high)
+	if(low <= high)
 	{
-		console.log(arr);
-		return arr;
+		var pivotIndex = partition(arr, low, high);
+		quickSort(arr, low, pivotIndex-1);
+		quickSort(arr, pivotIndex+1, high);
 	}
 	
-	var pivotIndex = partition(arr, low, high);
-	quickSort(arr, low, pivotIndex-1);
-	quickSort(arr, pivotIndex+1, high);
-	
+	return arr
 }
 
 function partition(arr, low, high):number
