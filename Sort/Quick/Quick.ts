@@ -17,7 +17,6 @@ export default function quickSort(arr:number[], low:number, high:number):number[
 	return arr
 }
 
-
 /**
  * Partition function that returns pivot's position
  * @param arr
