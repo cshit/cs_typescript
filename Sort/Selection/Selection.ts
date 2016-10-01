@@ -25,6 +25,11 @@
 // 	return arr
 // }
 
+/**
+ * Selection Sort O(n^2)
+ * @param arr
+ * @returns {number[]}
+ */
 export default function selectionSort(arr:number[]):number[]
 {
 	for(let j=0; j<=arr.length-1; j++)

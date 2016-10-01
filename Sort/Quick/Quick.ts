@@ -1,28 +1,31 @@
 /**
- * Quick Sort Best case an Avg: O(n log n ) Worst: O(n^2)
+ * Quick Sort Best case and avg: O(n log n ) Worst: O(n^2)
  * @param arr
  * @param low
  * @param high
  * @returns {number[]}
  */
-
-export default function quickSort(arr:number[], low, high){
+export default function quickSort(arr:number[], low:number, high:number):number[]
+{
 	if(low < high)
 	{
 		var pivotIndex = partition(arr, low, high);
 		quickSort(arr, low, pivotIndex-1);
 		quickSort(arr, pivotIndex+1, high);
-
-		console.log('AFTER');
-		console.log(high);
-		console.log(low);
-		console.log(arr);
 	}
 	
 	return arr
 }
 
-function partition(arr, low, high):number
+
+/**
+ * Partition function that returns pivot's position
+ * @param arr
+ * @param low
+ * @param high
+ * @returns {number}
+ */
+function partition(arr:number[], low:number, high:number):number
 {
 	var pivotIndex = Math.floor((low+high)/2);
 	

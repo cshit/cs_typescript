@@ -22,7 +22,12 @@
 // 	return arr
 // }
 
-export default function bubbleSort(arr:number[])
+/**
+ * Bubble Sort O(n^2)
+ * @param arr
+ * @returns {number[]}
+ */
+export default function bubbleSort(arr:number[]):number[]
 {
 	for(let j=0; j<=arr.length-1;j++)
 	{
@@ -33,8 +38,8 @@ export default function bubbleSort(arr:number[])
 
 			if(next < init)
 			{
-				arr[i + 1]  = init;
-				arr[i]      = next;
+				arr[i+1] = init;
+				arr[i]   = next;
 			}
 		}
 	}
