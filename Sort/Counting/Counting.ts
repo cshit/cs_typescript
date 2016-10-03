@@ -1,7 +1,6 @@
 export default function countingSort(arr:number[], min:number, max:number):number[]
 {
 	var counterArr = [];
-	var count = max-min-1;
 	
 	for(let i=0; i<=max; i++)
 	{
@@ -32,7 +31,3 @@ export default function countingSort(arr:number[], min:number, max:number):numbe
 	
 	return arr
 }
-
-
-var arr =  [5,10,7,3,4,4,6,10,5];
-console.log(countingSort(arr, 3, 10));
