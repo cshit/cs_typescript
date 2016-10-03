@@ -1,3 +1,11 @@
+/**
+ * Counting Sort O(n), this is not a comparison algorithm. Good for integers in a small range. 
+ * @param arr
+ * @param min
+ * @param max
+ * @returns {number[]}
+ */
+
 export default function countingSort(arr:number[], min:number, max:number):number[]
 {
 	var counterArr = [];
