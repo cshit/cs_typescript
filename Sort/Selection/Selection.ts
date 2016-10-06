@@ -36,13 +36,11 @@ export default function selectionSort(arr:number[]):number[]
 	{
 		for(let i=j+1; i<=arr.length-1; i++)
 		{
-			var base:number = arr[j];
-			var current:number = arr[i];
-
-			if( base > current)
+			if( arr[j] > arr[i])
 			{
-				arr[j] = current;
-				arr[i] = base;
+				var temp = arr[j];
+				arr[j] = arr[j];
+				arr[i] = temp;
 			}
 		}
 	}
