@@ -1,4 +1,4 @@
-/** 
+/**
  * Merge Sort O(n log(n)) ; Recursive; not memory efficient; Stable
  * @param arr
  * @param low
@@ -8,19 +8,19 @@
 
 export default function mergeSort(arr:number[], low:number, high:number):number[]
 {
-	if(low > high)
+	if(low < high)
 	{
 		var middle = Math.floor((low+high)/2);
 
 		mergeSort(arr, low, middle);
 		mergeSort(arr, middle+1, high);
-		merge(arr, low, middle, high);
+		mergeIt(arr, low, middle, high);
 	}
 
 	return arr
 }
 
-function merge(arr:number[], low:number, middle:number, high:number):void
+function mergeIt(arr:number[], low:number, middle:number, high:number):void
 {
 	// Step 1: Copy the original arr
 	var tempArr = [];
