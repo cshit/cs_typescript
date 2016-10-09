@@ -86,7 +86,6 @@ export default class NodeBST implements INodeBST
 		}
 		else if(currentNode.leftChild)
 		{
-			console.log('left');
 			if(direction == 'left')
 			{
 				prevNode.leftChild = currentNode.leftChild
@@ -98,7 +97,6 @@ export default class NodeBST implements INodeBST
 		}
 		else if (currentNode.rightChild)
 		{
-			console.log('right');
 			if(direction == 'right')
 			{
 				prevNode.rightChild = currentNode.rightChild
@@ -118,8 +116,7 @@ export default class NodeBST implements INodeBST
 
 		if(this.leftChild)
 			this.leftChild.traverseInOrder(array);
-
-		console.log(this.value);
+		
 		array.push(this.value);
 
 		if (this.rightChild)
@@ -131,8 +128,7 @@ export default class NodeBST implements INodeBST
 	traversePreOrder():any[]
 	{
 		var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
-
-		console.log(this.value);
+		
 		array.push(this.value);
 
 		if(this.leftChild)
@@ -152,7 +148,7 @@ export default class NodeBST implements INodeBST
 		if (this.rightChild)
 			this.rightChild.traversePreOrder(array);
 
-		console.log(this.value);
+		
 		array.push(this.value);
 
 		return array

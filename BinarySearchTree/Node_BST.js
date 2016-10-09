@@ -54,7 +54,6 @@ var NodeBST = (function () {
             }
         }
         else if (currentNode.leftChild) {
-            console.log('left');
             if (direction == 'left') {
                 prevNode.leftChild = currentNode.leftChild;
             }
@@ -63,7 +62,6 @@ var NodeBST = (function () {
             }
         }
         else if (currentNode.rightChild) {
-            console.log('right');
             if (direction == 'right') {
                 prevNode.rightChild = currentNode.rightChild;
             }
@@ -77,7 +75,6 @@ var NodeBST = (function () {
         var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
         if (this.leftChild)
             this.leftChild.traverseInOrder(array);
-        console.log(this.value);
         array.push(this.value);
         if (this.rightChild)
             this.rightChild.traverseInOrder(array);
@@ -85,7 +82,6 @@ var NodeBST = (function () {
     };
     NodeBST.prototype.traversePreOrder = function () {
         var array = typeof arguments[0] == 'undefined' ? [] : arguments[0];
-        console.log(this.value);
         array.push(this.value);
         if (this.leftChild)
             this.leftChild.traversePreOrder(array);
@@ -99,7 +95,6 @@ var NodeBST = (function () {
             this.leftChild.traversePreOrder(array);
         if (this.rightChild)
             this.rightChild.traversePreOrder(array);
-        console.log(this.value);
         array.push(this.value);
         return array;
     };
