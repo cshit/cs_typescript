@@ -24,7 +24,7 @@ function permuteHighttoLow(target:number[]):number[]
 		{
 			if(i!=j)
 			{
-			combinations.push([target[j], target[i]])
+				permutations.push([target[j], target[i]])
 			}
 		}
 	}
