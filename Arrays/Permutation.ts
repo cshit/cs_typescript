@@ -32,4 +32,7 @@ function permuteHighttoLow(target:number[]):number[]
 	return permutations
 }
 
-export default {permuteLowtoHigh: permuteLowtoHigh, permuteHighttoLow: permuteHighttoLow}
+export default  {
+					permuteLowtoHigh: permuteLowtoHigh,
+					permuteHighttoLow: permuteHighttoLow
+				}
