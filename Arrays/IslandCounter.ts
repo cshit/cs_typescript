@@ -3,6 +3,19 @@ export default function countIslands(target:string[][]):number
 	var count = 0;
 	var map = {};
 
+	for(let y=0; y<target.length; y++)
+	{
+		const row = target[y];
+
+		for(let x=0; x<row.length; x++)
+		{
+			if(checkForX(x, y, true))
+			{
+				count++;
+			}
+		}
+	}
+
 	function checkForX(x:number, y:number, start?:boolean):boolean
 	{
 		if(x>=0 && y>=0 && y<target.length && x<target[y].length)
@@ -33,19 +46,6 @@ export default function countIslands(target:string[][]):number
 
 		}
 		return false;
-	}
-
-	for(let y=0; y<target.length; y++)
-	{
-		const row = target[y];
-
-		for(let x=0; x<row.length; x++)
-		{
-			if(checkForX(x, y, true))
-			{
-				count++;
-			}
-		}
 	}
 	
 	return count
